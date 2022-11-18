@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAuth_API", "HelloAuth_API\HelloAuth_API.csproj", "{38AD08FB-4EDA-4EBF-BD2E-3F4E4C2FE308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAuth_Data", "HelloAuth_Data\HelloAuth_Data.csproj", "{62012403-1BD9-4535-B214-1E720C1BF6A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAuth_Model", "HelloAuth_Model\HelloAuth_Model.csproj", "{AD659006-3A9F-420F-B4DF-EB90E434E27B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAuth_Utility", "HelloAuth_Utility\HelloAuth_Utility.csproj", "{9B13435F-5C52-4604-8620-0AB1D072BFBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAuth_Logic", "HelloAuth_Logic\HelloAuth_Logic.csproj", "{DACE15B4-4077-4697-9F91-BE196301E9DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38AD08FB-4EDA-4EBF-BD2E-3F4E4C2FE308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AD08FB-4EDA-4EBF-BD2E-3F4E4C2FE308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AD08FB-4EDA-4EBF-BD2E-3F4E4C2FE308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AD08FB-4EDA-4EBF-BD2E-3F4E4C2FE308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62012403-1BD9-4535-B214-1E720C1BF6A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62012403-1BD9-4535-B214-1E720C1BF6A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62012403-1BD9-4535-B214-1E720C1BF6A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62012403-1BD9-4535-B214-1E720C1BF6A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD659006-3A9F-420F-B4DF-EB90E434E27B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD659006-3A9F-420F-B4DF-EB90E434E27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD659006-3A9F-420F-B4DF-EB90E434E27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD659006-3A9F-420F-B4DF-EB90E434E27B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B13435F-5C52-4604-8620-0AB1D072BFBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B13435F-5C52-4604-8620-0AB1D072BFBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B13435F-5C52-4604-8620-0AB1D072BFBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B13435F-5C52-4604-8620-0AB1D072BFBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DACE15B4-4077-4697-9F91-BE196301E9DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DACE15B4-4077-4697-9F91-BE196301E9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DACE15B4-4077-4697-9F91-BE196301E9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DACE15B4-4077-4697-9F91-BE196301E9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {069AD526-4F1E-4D6E-A353-9162EC8A6143}
+	EndGlobalSection
+EndGlobal

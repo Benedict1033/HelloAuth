@@ -1,0 +1,17 @@
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Data.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Data.pdb
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\obj\Debug\HelloAuth_Data.csproj.AssemblyReference.cache
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\obj\Debug\HelloAuth_Data.csproj.CoreCompileInputs.cache
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\obj\Debug\HelloAuth_Data.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\obj\Debug\HelloAuth_Data.pdb
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\Dapper.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Model.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Utility.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\Newtonsoft.Json.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\NLog.dll
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\Dapper.xml
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Model.pdb
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\HelloAuth_Utility.pdb
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\Newtonsoft.Json.xml
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\bin\Debug\NLog.xml
+C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Data\obj\Debug\HelloAuth_Data.csproj.CopyComplete
