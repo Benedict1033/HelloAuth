@@ -4,3 +4,9 @@ C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Model\obj\Debug
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Model\obj\Debug\HelloAuth_Model.csproj.CoreCompileInputs.cache
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Model\obj\Debug\HelloAuth_Model.dll
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Model\obj\Debug\HelloAuth_Model.pdb
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\bin\Debug\HelloAuth_Model.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\bin\Debug\HelloAuth_Model.pdb
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\obj\Debug\HelloAuth_Model.csproj.AssemblyReference.cache
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\obj\Debug\HelloAuth_Model.csproj.CoreCompileInputs.cache
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\obj\Debug\HelloAuth_Model.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Model\obj\Debug\HelloAuth_Model.pdb

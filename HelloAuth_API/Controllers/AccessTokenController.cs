@@ -13,7 +13,6 @@ namespace HelloAuth_API.Controllers
 {
     [RoutePrefix("api")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-
     public class AccessTokenController : BaseController
     {
         [HttpPost]

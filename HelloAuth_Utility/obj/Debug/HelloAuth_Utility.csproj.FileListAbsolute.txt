@@ -9,3 +9,14 @@ C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Utility\obj\Deb
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.csproj.CopyComplete
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.dll
 C:\Users\benedicttiong\Desktop\HelloAuth\HelloAuth_API\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.pdb
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\HelloAuth_Utility.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\HelloAuth_Utility.pdb
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\HelloAuth_Model.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\Newtonsoft.Json.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\HelloAuth_Model.pdb
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\bin\Debug\Newtonsoft.Json.xml
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.csproj.AssemblyReference.cache
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.csproj.CoreCompileInputs.cache
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.csproj.CopyComplete
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.dll
+C:\Users\benedicttiong\Desktop\Hello\HelloAuth_Utility\obj\Debug\HelloAuth_Utility.pdb

@@ -13,6 +13,7 @@ namespace HelloAuth_Model.Table
         public String System_Name { get; set; }
 
         public String Password { get; set; }
+        public bool Enable { get; set; }
 
     }
 }

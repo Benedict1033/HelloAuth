@@ -27,7 +27,7 @@ namespace HelloAuth_Data
 
         public List<SYSTEMINFO> SelectSystem(tokenClass model)
         {
-            var strSQL = @"SELECT System_Name,Password,id
+            var strSQL = @"SELECT System_Name,Password,id,Enable
                             FROM  HelloAuth.dbo.SystemInfo
                            WHERE System_Name =@System_Name";
             var parameters = new DynamicParameters();
@@ -43,9 +43,10 @@ namespace HelloAuth_Data
             var parameters = new DynamicParameters();
             parameters.Add("@System_Name", model.system, DbType.String, ParameterDirection.Input);
             parameters.Add("@Password", ExtendMethods.ConvertToMD5(model.passWord), DbType.String, ParameterDirection.Input);
+            parameters.Add("@Enable", true,DbType.Boolean, ParameterDirection.Input);
 
-            var strSQL = @"INSERT INTO HelloAuth.dbo.SystemInfo(System_Name,Password)
-                                    VALUES (@System_Name,@Password)";
+            var strSQL = @"INSERT INTO HelloAuth.dbo.SystemInfo(System_Name,Password,Enable)
+                                    VALUES (@System_Name,@Password,@Enable)";
 
             Connection.Execute(
                                     sql: strSQL,
@@ -54,39 +55,60 @@ namespace HelloAuth_Data
                                 );
         }
 
-        public List<SYSTEMINFO> DeleteSystem(tokenClass model)
-        {
-            //    var qq = "DELETE FROM HelloAuth.dbo.SystemInfo WHERE System_Name ='" + model.system + "'";
-            //var qq = "UPDATE  HelloAuth.dbo.SystemInfo SET System_Name =@System_Name ,PassWord=@PassWord WHERE id=@id ";
-            var parameters = new DynamicParameters();
+        //public List<SYSTEMINFO> DeleteSystem(tokenClass model)
+        //{
+        //    //    var qq = "DELETE FROM HelloAuth.dbo.SystemInfo WHERE System_Name ='" + model.system + "'";
+        //    //var qq = "UPDATE  HelloAuth.dbo.SystemInfo SET System_Name =@System_Name ,PassWord=@PassWord WHERE id=@id ";
+        //    var parameters = new DynamicParameters();
 
-            parameters.Add("@System_Name", model.system, DbType.String, ParameterDirection.Input);
-            parameters.Add("@PassWord", model.passWord, DbType.String, ParameterDirection.Input);
-            //parameters.Add("@id", );
+        //    parameters.Add("@System_Name", model.system, DbType.String, ParameterDirection.Input);
+        //    parameters.Add("@PassWord", model.passWord, DbType.String, ParameterDirection.Input);
+        //    //parameters.Add("@id", );
 
-            var strSQL = @"UPDATE  HelloAuth.dbo.SystemInfo
-                            SET 
-                            System_Name =@System_Name ,
-                            PassWord=@PassWord 
-                            WHERE id=@id";
+        //    var strSQL = @"UPDATE  HelloAuth.dbo.SystemInfo
+        //                    SET 
+        //                    System_Name =@System_Name ,
+        //                    PassWord=@PassWord 
+        //                    WHERE id=@id";
 
-            List<SYSTEMINFO> sys = Connection.Query<SYSTEMINFO>(strSQL, parameters).ToList();
+        //    List<SYSTEMINFO> sys = Connection.Query<SYSTEMINFO>(strSQL, parameters).ToList();
 
-            return sys;
-        }
+        //    return sys;
+        //}
 
         public List<SYSTEMINFO> UpdateSystem(tokenClass model)
         {
             var parameters = new DynamicParameters();
 
             parameters.Add("@System_Name", model.system, DbType.String, ParameterDirection.Input);
-            parameters.Add("@PassWord", model.newPassword, DbType.String, ParameterDirection.Input);
+            parameters.Add("@PassWord", ExtendMethods.ConvertToMD5(model.newPassword), DbType.String, ParameterDirection.Input);
             parameters.Add("@id", SelectSystem(model)[0].ID);
 
             var strSQL = @"UPDATE HelloAuth.dbo.SystemInfo
                             SET 
                             System_Name =@System_Name ,
                             PassWord=@PassWord 
+                            WHERE id=@id";
+
+            Connection.Execute(
+                                    sql: strSQL,
+                                    param: parameters,
+                                    commandType: CommandType.Text
+                                );
+
+            return null;
+        }
+
+        public List<SYSTEMINFO> DeleteSystem(tokenClass model)
+        {
+            var parameters = new DynamicParameters();
+
+            parameters.Add("@Enable", false, DbType.Boolean, ParameterDirection.Input);
+            parameters.Add("@id", SelectSystem(model)[0].ID);
+
+            var strSQL = @"UPDATE HelloAuth.dbo.SystemInfo
+                            SET 
+                            Enable=@Enable
                             WHERE id=@id";
 
             Connection.Execute(

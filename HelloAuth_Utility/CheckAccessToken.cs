@@ -19,11 +19,11 @@ namespace HelloAuth_Utility
                 var signature = split[2];
                 string key = ConfigurationManager.AppSettings["TokenKey"]; //從 web.config 取得TokenKey
 
-                if (signature != ExtendMethods.ComputeHMACSHA256(iv + "." + encrypt, key.Substring(0, 64)))//檢查簽章是否正確
+                if (signature != ExtendMethods.ComputeHMACSHA256(iv + "." + encrypt.Replace(" ", "+"), key.Substring(0, 64)))//檢查簽章是否正確
                     return false;
 
                 //使用 AES 解密 Payload
-                var base64 = AesDecrypt(encrypt, key.Substring(0, 32), iv);
+                var base64 = AesDecrypt(encrypt.Replace(" ", "+"), key.Substring(0, 32), iv);
                 var json = Encoding.UTF8.GetString(Convert.FromBase64String(base64));
                 var payload = JsonConvert.DeserializeObject<dataPayload>(json);
 

@@ -1,6 +1,5 @@
 ﻿using Dapper;
 using HelloAuth_Model.Data;
-using HelloAuth_Utility;
 using System;
 using System.Configuration;
 using System.Data.SqlClient;
@@ -39,7 +38,8 @@ namespace HelloAuth_API.Controllers
 
                         return BadRequest("System name duplicated");
                     }
-                    else {
+                    else
+                    {
                         LogicSystemInfo.CreateSystem(model);
 
                         CreateLog(model, "success", "");
@@ -58,99 +58,51 @@ namespace HelloAuth_API.Controllers
                 return BadRequest("password expire");
         }
 
-        //[HttpPut]
-        //[Route("update")]
-        //public IHttpActionResult Update(tokenClass model)
-        //{
-        //    try
-        //    {
-        //        if (LogicSystemInfo.CheckSystemExits(model))
-        //        {
-        //            LogicSystemInfo.UpdateSystem(model);
-
-        //            return Ok("update success");
-        //        }
-        //        else
-        //            return BadRequest("system not exist");
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message + ";" + ex.StackTrace);
-        //    }
-        //}
-
-        ///以下程式碼還沒整理好
-
-        [HttpDelete]
-        [Route("delete")]
-        public string Delete(tokenClass model)
+        [HttpPut]
+        [Route("update")]
+        public IHttpActionResult Update(tokenClass model)
         {
-            var con = new SqlConnection(ConfigurationManager.AppSettings["Connection1"]);
-            con.Open();
-            var query = "Select System_Name,Password,ID FROM  HelloAuth.dbo.SystemInfo WHERE System_Name ='" + model.system + "'";
-            SqlCommand command = new SqlCommand(query, con);
-            SqlDataReader reader = command.ExecuteReader();
-            string pass = "";
-            while (reader.Read())
-                pass = reader["PassWord"].ToString();
-
-            if (ExtendMethods.ConvertToMD5(model.passWord) == pass)
+            try
             {
-                var qq = "DELETE FROM HelloAuth.dbo.SystemInfo WHERE System_Name ='" + model.system + "'";
-                con.Execute(qq);
-
-                DeleteLog(model, "成功", "刪除成功"); //存失敗的Log + exception
-                return "刪除成功";
+                if (LogicSystemInfo.CheckSystemExits(model))
+                {
+                    if (LogicSystemInfo.UpdateSystem(model))
+                        return Ok("update success");
+                    else
+                        return BadRequest("incorrect password or password cannot be same");
+                }
+                else
+                    return BadRequest("system not exist");
             }
-            else
+            catch (Exception ex)
             {
-                DeleteLog(model, "失敗", "請提供正確的密碼"); //存失敗的Log + exception
-                return "請提供正確的密碼";
+                return BadRequest(ex.Message + ";" + ex.StackTrace);
             }
         }
 
         [HttpPut]
-        [Route("update")]
-        public string Update(tokenClass model)
+        [Route("delete")]
+        public IHttpActionResult Delete(tokenClass model)
         {
-            var con = new SqlConnection(ConfigurationManager.AppSettings["Connection1"]);
-            con.Open();
-            var query = "Select System_Name,Password,ID FROM  HelloAuth.dbo.SystemInfo WHERE System_Name ='" + model.system + "'";
-            SqlCommand command = new SqlCommand(query, con);
-            SqlDataReader reader = command.ExecuteReader();
-            string ID = "";
-            string pass = "";
-
-            while (reader.Read())
+            try
             {
-                ID = reader["ID"].ToString();
-                pass = reader["PassWord"].ToString();
+                if (LogicSystemInfo.CheckSystemExits(model))
+                {
+                    if (LogicSystemInfo.DeleteSystem(model))
+                        return Ok("delete success");
+                    else
+                        return BadRequest("incorrect password");
+                }
+                else
+                    return BadRequest("system not exist");
             }
-
-            if (model.newPassword == model.passWord)
+            catch (Exception ex)
             {
-                UpdateLog(model, "失敗", "password cannot be same");
-                return "password cannot be same";
-            }
-            else if (ExtendMethods.ConvertToMD5(model.passWord) == pass)
-            {
-                var qq = "UPDATE  HelloAuth.dbo.SystemInfo SET System_Name =@System_Name ,PassWord=@PassWord WHERE id=@id ";
-                var dp = new DynamicParameters();
-                dp.Add("@System_Name", model.system);
-                dp.Add("@PassWord", ExtendMethods.ConvertToMD5(model.newPassword));
-                dp.Add("@id", ID);
-                con.Execute(qq, dp);
-                UpdateLog(model, "成功", "");
-                return "修改成功";
-            }
-            else
-            {
-                UpdateLog(model, "失敗", "請提供正確的密碼");
-                return "請提供正確的密碼";
+                return BadRequest(ex.Message + ";" + ex.StackTrace);
             }
         }
 
+        ///以下程式碼還沒整理好
         void CreateLog(tokenClass model, string status, string ex)
         {
             string time = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
